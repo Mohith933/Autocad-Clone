@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, sans-serif;
+}
+body {
+  background: radial-gradient(circle at top, #0b1d33, #050b14);
+  color: white;
+}
+
+/* HEADER */
+.top-bar {
+  height: 70px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav span {
+  margin-left: 30px;
+  opacity: 0.85;
+}
+
+nav .active {
+  opacity: 1;
+}
+
+/* CAD AREA */
+.cad-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+    min-height: auto;
+  padding-bottom: 40px;
+}
+
+canvas {
+  background: #050b14;
+  border: 1px solid rgba(30,124,255,0.4);
+  border-radius: 12px;
+}
+
+/* COMMAND BAR */
+.command-bar {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: rgba(6,18,34,0.9);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: inset 0 0 0 1px rgba(30,124,255,0.4);
+}
+
+.command-bar span {
+  font-size: 18px;
+  color: #8fbaff;
+}
+
+.command-bar input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #1e7cff;
+  font-size: 18px;
+  width: 300px;
+}
+@media (max-width: 768px) {
+
+  /* Keep header but simplify it */
+  .top-bar {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  /* Hide nav links only */
+  nav {
+    display: none;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  /* Prevent vertical stretching */
+  body {
+    min-height: auto;
+  }
+
+  .cad-wrapper {
+    padding: 20px 12px;
+    height: auto;
+  }
+
+  canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .command-bar {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 14px;
+  }
+
+  .command-bar input {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
